@@ -234,3 +234,18 @@ p{text-wrap:pretty}
   .precos p{font-size:13px}
   .orn-hero{width:50vw}
 }
+
+/* molduras iguais ao quadro do hero: papel, filete preto e fio dourado */
+.fr{padding:clamp(7px,.8vw,12px);background:#efe7da;border:clamp(4px,.4vw,6px) solid #0a0909;box-shadow:0 0 0 1px rgba(232,185,49,.4),0 26px 44px -26px #000}
+.grade{gap:clamp(16px,1.8vw,24px)}
+.par{gap:clamp(14px,1.6vw,22px)}
+.lb img{padding:clamp(8px,1vw,14px);background:#efe7da;border:6px solid #0a0909;box-shadow:0 0 0 1px rgba(232,185,49,.4)}
+@media (max-width:760px){ .grade,.par{gap:12px} .fr{padding:6px;border-width:4px} }
+/* logo da nav no mesmo destaque do rodapé */
+.marca img{height:96px}
+.topo.solido .marca img{height:66px}
+.topo{padding-top:12px;padding-bottom:12px}
+.hero{padding-top:124px}
+@media (max-width:860px){ .marca img{height:72px} .topo.solido .marca img{height:58px} .hero{padding-top:104px} }
+@media (max-height:520px) and (orientation:landscape){ .marca img,.topo.solido .marca img{height:52px} .hero{padding-top:72px} }
+@media (min-width:861px){ .quadro{--h:max(330px,min(calc(100svh - 410px),620px))} }

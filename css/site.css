@@ -241,11 +241,14 @@ p{text-wrap:pretty}
 .par{gap:clamp(14px,1.6vw,22px)}
 .lb img{padding:clamp(8px,1vw,14px);background:#efe7da;border:6px solid #0a0909;box-shadow:0 0 0 1px rgba(232,185,49,.4)}
 @media (max-width:760px){ .grade,.par{gap:12px} .fr{padding:6px;border-width:4px} }
-/* logo da nav no mesmo destaque do rodapé */
-.marca img{height:96px}
-.topo.solido .marca img{height:66px}
-.topo{padding-top:12px;padding-bottom:12px}
-.hero{padding-top:124px}
-@media (max-width:860px){ .marca img{height:72px} .topo.solido .marca img{height:58px} .hero{padding-top:104px} }
-@media (max-height:520px) and (orientation:landscape){ .marca img,.topo.solido .marca img{height:52px} .hero{padding-top:72px} }
-@media (min-width:861px){ .quadro{--h:max(330px,min(calc(100svh - 410px),620px))} }
+/* logo: grande no topo do hero, como no rodapé; encolhe quando a barra fica sólida */
+.topo{padding-top:14px;padding-bottom:14px}
+.marca{align-self:start}
+.marca img{height:150px}
+.topo.solido .marca img{height:64px}
+.topo.solido .marca{align-self:center}
+.hero{padding-top:178px}
+.nome{margin-top:24px}
+@media (min-width:861px){ .quadro{--h:max(320px,min(calc(100svh - 430px),620px))} }
+@media (max-width:860px){ .marca img{height:104px} .topo.solido .marca img{height:56px} .hero{padding-top:132px} }
+@media (max-height:520px) and (orientation:landscape){ .marca img{height:84px} .topo.solido .marca img{height:48px} .hero{padding-top:104px} }

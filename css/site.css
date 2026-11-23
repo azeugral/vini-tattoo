@@ -252,3 +252,15 @@ p{text-wrap:pretty}
 @media (min-width:861px){ .quadro{--h:max(320px,min(calc(100svh - 430px),620px))} }
 @media (max-width:860px){ .marca img{height:104px} .topo.solido .marca img{height:56px} .hero{padding-top:132px} }
 @media (max-height:520px) and (orientation:landscape){ .marca img{height:84px} .topo.solido .marca img{height:48px} .hero{padding-top:104px} }
+
+/* celular: grupos sempre simétricos e seções curtas */
+@media (max-width:760px){
+  .filtros{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:440px;margin-left:auto;margin-right:auto}
+  .filtros button{grid-column:auto;white-space:nowrap}
+  .filtros > :first-child:nth-last-child(odd){grid-column:1/-1}
+  .chips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .chips label{display:block}
+  .chips span{display:flex;align-items:center;justify-content:center;height:100%;text-align:center}
+  .chips > :last-child:nth-child(odd){grid-column:1/-1}
+}
+@media (max-width:760px){ .inclui{display:grid;grid-template-columns:auto auto;justify-content:center;gap:10px 22px;font-size:14px} }

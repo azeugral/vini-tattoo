@@ -38,7 +38,7 @@
   function observar() { d.querySelectorAll('.rev:not(.vis),.item:not(.vis):not(.sai)').forEach(function (el) { io.observe(el); }); }
 
   /* ---------- festas ---------- */
-  var grade = d.getElementById('grade'), mais = d.getElementById('mais'), filtro = 'todos', passoN = 24, limite = passoN;
+  var grade = d.getElementById('grade'), mais = d.getElementById('mais'), filtro = 'todos', passoN = innerWidth < 760 ? 12 : 24, limite = passoN;
   PECAS.forEach(function (p, i) {
     var f = d.createElement('figure'); f.className = 'item'; f.tabIndex = 0; f.dataset.i = i;
     f.setAttribute('role', 'button'); f.setAttribute('aria-label', 'Ampliar: ' + p.l);
